@@ -1,16 +1,58 @@
-# This is a sample Python script.
+import random
+import math
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+'''
+#Задача 10: На столе лежат n монеток. Некоторые из них лежат вверх решкой, а некоторые – гербом.
+#Определите минимальное число монеток, которые нужно перевернуть, чтобы все монетки были повернуты вверх одной и той же стороной. Выведите минимальное количество монет, которые нужно перевернуть
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+n = int(input('Кол-во монет'))
+e = 0
+t = 0
+for i in range(n):
+    eagleTails = random.randint(0, 1)
+    if eagleTails == 0:
+        Tails = eagleTails
+        t += 1
+    else:
+        eagle = eagleTails
+        e += 1
+if t < e:
+    print('переверните решко')
+else:
+    print('переверните орел')
+print('решко -', t, 'орел - ', e)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+'''
+'''
+#Задача 12: Петя и Катя – брат и сестра. Петя – студент, а Катя – школьница. Петя помогает Кате по математике. Он задумывает два натуральных числа X и Y (X,Y≤1000),
+# а Катя должна их отгадать. Для этого Петя делает две подсказки. Он называет сумму этих чисел S и их произведение P. Помогите Кате отгадать задуманные Петей числа.
+
+
+x = random.randint(0, 1000)
+print(x)
+y = random.randint(0, 1000)
+print(y)
+s = x + y
+p = x * y
+if x + y == s and x * y == p:
+    digital1 = x
+    digital2 = y
+    print('ваши числа: ', x, ' - ', y)
+print('сумма - ', s)
+print('произведение - ', p)
+
+'''
+
+
+#Задача 14: Требуется вывести все целые степени двойки (т.е. числа вида 2k), не превосходящие числа N.
+
+N = int(input('введите число'))
+i = 0
+while i < N:
+    s = pow(2, i)
+    i += 1
+    if s > N:
+        break
+    print(s)
